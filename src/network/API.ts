@@ -3,7 +3,7 @@ import {Movie, MovieDetail} from '../models/Movie';
 
 const API_BASE_URL = 'https://search.imdbot.workers.dev/';
 
-class API {
+export class API {
   static async searchMovies(query: string): Promise<Movie[]> {
     try {
       const response = await axios.get(`${API_BASE_URL}?q=${query}`);
@@ -47,4 +47,3 @@ class API {
   }
 }
 
-export default API;

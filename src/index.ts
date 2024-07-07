@@ -1,4 +1,10 @@
-import API from './network/API';
-import { Movie, MovieDetail } from './models/Movie';
+export * from './models/Movie';
+export * from './store/MovieStore';
+export { NmSDKConfigs } from './models/Configs'
+import { NmSDKConfigs, SDKConfigs } from './models/Configs';
 
-export {API, Movie, MovieDetail};
+export class NMovieSDK {
+    static config(cfg: NmSDKConfigs) {  
+        SDKConfigs.value = cfg;
+    }
+}
